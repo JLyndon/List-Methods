@@ -152,7 +152,53 @@ while True:
             print(_list)
             break
         if (Usr_Decision == choices_[3]) or (Usr_Decision == choices_[9]):
-            print("ins")
+            print(f"{Grn}{Itlc}Enter the value you want to insert{End}")
+            add_val = input("\n> ")
+            if ("-" in add_val) and ("." in add_val):
+                updateval = float(add_val)
+                print(f"{Blue}{Itlc}Enter the position the value to be inserted (0-9){End}")
+                while True:
+                    pos_val = input("\n> ")
+                    if pos_val.isnumeric() == True:
+                        conv_pos = int(pos_val)
+                        _list.insert(conv_pos, updateval)
+                        break
+                    else:
+                        print(f"{Red}Invalid input format. Allowable inputs are positive integers only between 0 and 9{End}")
+            elif ("-" not in add_val) and ("." in add_val):
+                updateval = float(add_val)
+                print(f"{Blue}{Itlc}Enter the position the value to be inserted (0-9){End}")
+                while True:
+                    pos_val = input("\n> ")
+                    if pos_val.isnumeric() == True:
+                        conv_pos = int(pos_val)
+                        _list.insert(conv_pos, updateval)
+                        break
+                    else:
+                        print(f"{Red}Invalid input format. Allowable inputs are positive integers only between 0 and 9{End}")
+            elif ("-" in add_val) and ("." not in add_val):
+                updateval = int(add_val)
+                print(f"{Blue}{Itlc}Enter the position the value to be inserted (0-9){End}")
+                while True:
+                    pos_val = input("\n> ")
+                    if pos_val.isnumeric() == True:
+                        conv_pos = int(pos_val)
+                        _list.insert(conv_pos, updateval)
+                        break
+                    else:
+                        print(f"{Red}Invalid input format. Allowable inputs are positive integers only between 0 and 9{End}")
+            else:
+                updateval = int(add_val)
+                print(f"{Blue}{Itlc}Enter the position the value to be inserted (0-9){End}")
+                while True:
+                    pos_val = input("\n> ")
+                    if pos_val.isnumeric() == True:
+                        conv_pos = int(pos_val)
+                        _list.insert(conv_pos, updateval)
+                        break
+                    else:
+                        print(f"{Red}Invalid input format. Allowable inputs are positive integers only between 0 and 9{End}")
+            print(_list)
             break
         if (Usr_Decision == choices_[4]) or (Usr_Decision == choices_[10]):
             print("desc")
