@@ -198,11 +198,24 @@ while True:
                         break
                     else:
                         print(f"{Red}Invalid input format. Allowable inputs are positive integers only between 0 and 9{End}")
+
+        if (Usr_Decision == choices_[4]) or (Usr_Decision == choices_[10]):
+            print(f"{Itlc}Do you want to rearrange values in descending order ({Grn}Y{End}/{Red}N{End})?{End}")
+            desc_val = input("\n> ").lower()
+            for char in desc_val:
+                if char == "y":
+                    _list.sort(reverse=True)
+                elif char == "n":
+                    None
             print(_list)
             break
-        if (Usr_Decision == choices_[4]) or (Usr_Decision == choices_[10]):
-            print("desc")
-            break
         if (Usr_Decision == choices_[5]) or (Usr_Decision == choices_[11]):
-            print("asc")
+            print(f"{Itlc}Do you want to rearrange values in ascending order ({Grn}Y{End}/{Red}N{End})?{End}")
+            desc_val = input("\n> ").lower()
+            for char in desc_val:
+                if char == "y":
+                    _list.sort()
+                elif char == "n":
+                    None
+            print(_list)
             break
