@@ -73,7 +73,27 @@ while True:
             print(_list)
             break
         if (Usr_Decision == choices_[1]) or (Usr_Decision == choices_[7]):
-            print("del")
+            print(f"{Red}{Itlc}What would you like to remove?{End}")
+            rem_val = input("\n> ")
+            if (("." in rem_val) and ("-" in rem_val)):
+                update_val = float(rem_val)
+                if rem_val in _list:
+                    _list.remove(update_val)
+                else:
+                    print(f"{Red}The list doesn't contain the specified value.{End}")
+            if "." in rem_val:
+                update_val = float(rem_val)
+                if rem_val in _list:
+                    _list.remove(update_val)
+                else:
+                    print(f"{Red}The list doesn't contain the specified value.{End}")
+            else:
+                update_val = int(rem_val)
+                if rem_val in _list:
+                    _list.remove(update_val)
+                else:
+                    print(f"{Red}The list doesn't contain the specified value.{End}")
+            print(_list)
             break
         if (Usr_Decision == choices_[2]) or (Usr_Decision == choices_[8]):
             print("mod")
