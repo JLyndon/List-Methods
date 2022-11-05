@@ -28,6 +28,13 @@ def InputValidator(EvalueeStr): # Checks Input Eligibility - Separate Function f
         print(f"{Red}Invalid input format. Allowable inputs are positive integer, decimal, and negatives only{End}")
         return "not valid"
 
+def ProceedorNot(Decision):
+    for char in Decision.lower():
+        if char == "y":
+            return "proceed"
+        else:
+            return "terminate"
+
 Red = "\33[91m" # Decorative Variable Group
 Grn = "\33[92m"
 Yllw = "\33[93m"
@@ -56,22 +63,28 @@ while True:
         if (Usr_Decision == choices_[0]) or (Usr_Decision == choices_[6]):
             print(f"{Grn}{Itlc}What would you like to append?{End}")
             add_val = input("\n> ")
-            Action_1 = InputValidator(add_val)
-            if Action_1 == "valid":
-                if ("-" in add_val) and ("." in add_val):
-                    updateval = float(add_val)
-                    _list.append(updateval)
-                elif ("-" not in add_val) and ("." in add_val):
-                    updateval = float(add_val)
-                    _list.append(updateval)
-                elif ("-" in add_val) and ("." not in add_val):
-                    updateval = int(add_val)
-                    _list.append(updateval)
-                else:
-                    updateval = int(add_val)
-                    _list.append(updateval)
+            if ("-" in add_val) and ("." in add_val):
+                updateval = float(add_val)
+                _list.append(updateval)
+            elif ("-" not in add_val) and ("." in add_val):
+                updateval = float(add_val)
+                _list.append(updateval)
+            elif ("-" in add_val) and ("." not in add_val):
+                updateval = int(add_val)
+                _list.append(updateval)
+            else:
+                updateval = int(add_val)
+                _list.append(updateval)
             print(_list)
-            break
+            print("\nWould you like to proceed? (Y/N)")
+            proceeding = input("\n> ")
+            decision = ProceedorNot(proceeding)
+            if decision == "proceed":
+                print("Enter a key from the menu to proceed")
+                None
+            elif decision == "terminate":
+                print("Have a nice day :)")
+                break
         if (Usr_Decision == choices_[1]) or (Usr_Decision == choices_[7]):
             print(f"{Red}{Itlc}What would you like to remove?{End}")
             rem_val = input("\n> ")
@@ -94,7 +107,15 @@ while True:
                 else:
                     print(f"{Red}The list doesn't contain the specified value.{End}")
             print(_list)
-            break
+            print("\nWould you like to proceed? (Y/N)")
+            proceeding = input("\n> ")
+            decision = ProceedorNot(proceeding)
+            if decision == "proceed":
+                print("Enter a key from the menu to proceed")
+                None
+            elif decision == "terminate":
+                print("Have a nice day :)")
+                break
         if (Usr_Decision == choices_[2]) or (Usr_Decision == choices_[8]):
             print(f"{Red}{Itlc}What would you like to modify/replace?{End}")
             mod_val = input("\n> ")
@@ -150,7 +171,15 @@ while True:
                 else:
                     print(f"{Red}The list doesn't contain the specified value.{End}")
             print(_list)
-            break
+            print("\nWould you like to proceed? (Y/N)")
+            proceeding = input("\n> ")
+            decision = ProceedorNot(proceeding)
+            if decision == "proceed":
+                print("Enter a key from the menu to proceed")
+                None
+            elif decision == "terminate":
+                print("Have a nice day :)")
+                break
         if (Usr_Decision == choices_[3]) or (Usr_Decision == choices_[9]):
             print(f"{Grn}{Itlc}Enter the value you want to insert{End}")
             add_val = input("\n> ")
@@ -198,7 +227,16 @@ while True:
                         break
                     else:
                         print(f"{Red}Invalid input format. Allowable inputs are positive integers only between 0 and 9{End}")
-
+            print(_list)
+            print("\nWould you like to proceed? (Y/N)")
+            proceeding = input("\n> ")
+            decision = ProceedorNot(proceeding)
+            if decision == "proceed":
+                print("Enter a key from the menu to proceed")
+                None
+            elif decision == "terminate":
+                print("Have a nice day :)")
+                break
         if (Usr_Decision == choices_[4]) or (Usr_Decision == choices_[10]):
             print(f"{Itlc}Do you want to rearrange values in descending order ({Grn}Y{End}/{Red}N{End})?{End}")
             desc_val = input("\n> ").lower()
@@ -208,7 +246,15 @@ while True:
                 elif char == "n":
                     None
             print(_list)
-            break
+            print("\nWould you like to proceed? (Y/N)")
+            proceeding = input("\n> ")
+            decision = ProceedorNot(proceeding)
+            if decision == "proceed":
+                print("Enter a key from the menu to proceed")
+                None
+            elif decision == "terminate":
+                print("Have a nice day :)")
+                break
         if (Usr_Decision == choices_[5]) or (Usr_Decision == choices_[11]):
             print(f"{Itlc}Do you want to rearrange values in ascending order ({Grn}Y{End}/{Red}N{End})?{End}")
             desc_val = input("\n> ").lower()
@@ -218,4 +264,14 @@ while True:
                 elif char == "n":
                     None
             print(_list)
-            break
+            print("\nWould you like to proceed? (Y/N)")
+            proceeding = input("\n> ")
+            decision = ProceedorNot(proceeding)
+            if decision == "proceed":
+                print("Enter a key from the menu to proceed")
+                None
+            elif decision == "terminate":
+                print("Have a nice day :)")
+                break
+        else:
+            print(f"{Red}Invalid input format. Allowable inputs are positive integers only between 1 and 6{End}")
