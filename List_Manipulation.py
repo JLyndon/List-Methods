@@ -96,7 +96,60 @@ while True:
             print(_list)
             break
         if (Usr_Decision == choices_[2]) or (Usr_Decision == choices_[8]):
-            print("mod")
+            print(f"{Red}{Itlc}What would you like to modify/replace?{End}")
+            mod_val = input("\n> ")
+            if (("." in mod_val) and ("-" in mod_val)):
+                update_val = float(mod_val)
+                if update_val in _list:
+                    modvar = _list.index(update_val)
+                    print(f"{Red}{Itlc}Enter a replacement value{End}")
+                    new_val = input("\n> ")
+                    if (("." in new_val) and ("-" in new_val)):
+                        newerval = float(new_val)
+                        _list[modvar] = newerval
+                    elif "." in new_val:
+                        newerval = float(new_val)
+                        _list[modvar] = newerval
+                    else:
+                        newerval = int(new_val)
+                        _list[modvar] = newerval
+                else:
+                    print(f"{Red}The list doesn't contain the specified value.{End}")
+            if "." in mod_val:
+                update_val = float(mod_val)
+                if update_val in _list:
+                    modvar = _list.index(update_val)
+                    print(f"{Red}{Itlc}Enter a replacement value{End}")
+                    new_val = input("\n> ")
+                    if (("." in new_val) and ("-" in new_val)):
+                        newerval = float(new_val)
+                        _list[modvar] = newerval
+                    elif "." in new_val:
+                        newerval = float(new_val)
+                        _list[modvar] = newerval
+                    else:
+                        newerval = int(new_val)
+                        _list[modvar] = newerval
+                else:
+                    print(f"{Red}The list doesn't contain the specified value.{End}")
+            else:
+                update_val = int(mod_val)
+                if update_val in _list:
+                    modvar = _list.index(update_val)
+                    print(f"{Red}{Itlc}Enter a replacement value{End}")
+                    new_val = input("\n> ")
+                    if (("." in new_val) and ("-" in new_val)):
+                        newerval = float(new_val)
+                        _list[modvar] = newerval
+                    elif "." in new_val:
+                        newerval = float(new_val)
+                        _list[modvar] = newerval
+                    else:
+                        newerval = int(new_val)
+                        _list[modvar] = newerval
+                else:
+                    print(f"{Red}The list doesn't contain the specified value.{End}")
+            print(_list)
             break
         if (Usr_Decision == choices_[3]) or (Usr_Decision == choices_[9]):
             print("ins")
