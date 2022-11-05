@@ -81,7 +81,7 @@ while True:
             decision = ProceedorNot(proceeding)
             if decision == "proceed":
                 print("Enter a key from the menu to proceed")
-                None
+                continue
             elif decision == "terminate":
                 print("Have a nice day :)")
                 break
@@ -90,19 +90,19 @@ while True:
             rem_val = input("\n> ")
             if (("." in rem_val) and ("-" in rem_val)):
                 update_val = float(rem_val)
-                if rem_val in _list:
+                if update_val in _list:
                     _list.remove(update_val)
                 else:
                     print(f"{Red}The list doesn't contain the specified value.{End}")
             if "." in rem_val:
                 update_val = float(rem_val)
-                if rem_val in _list:
+                if update_val in _list:
                     _list.remove(update_val)
                 else:
                     print(f"{Red}The list doesn't contain the specified value.{End}")
             else:
                 update_val = int(rem_val)
-                if rem_val in _list:
+                if update_val in _list:
                     _list.remove(update_val)
                 else:
                     print(f"{Red}The list doesn't contain the specified value.{End}")
@@ -112,7 +112,7 @@ while True:
             decision = ProceedorNot(proceeding)
             if decision == "proceed":
                 print("Enter a key from the menu to proceed")
-                None
+                continue
             elif decision == "terminate":
                 print("Have a nice day :)")
                 break
@@ -176,7 +176,7 @@ while True:
             decision = ProceedorNot(proceeding)
             if decision == "proceed":
                 print("Enter a key from the menu to proceed")
-                None
+                continue
             elif decision == "terminate":
                 print("Have a nice day :)")
                 break
@@ -233,7 +233,7 @@ while True:
             decision = ProceedorNot(proceeding)
             if decision == "proceed":
                 print("Enter a key from the menu to proceed")
-                None
+                continue
             elif decision == "terminate":
                 print("Have a nice day :)")
                 break
@@ -251,7 +251,7 @@ while True:
             decision = ProceedorNot(proceeding)
             if decision == "proceed":
                 print("Enter a key from the menu to proceed")
-                None
+                continue
             elif decision == "terminate":
                 print("Have a nice day :)")
                 break
@@ -269,7 +269,7 @@ while True:
             decision = ProceedorNot(proceeding)
             if decision == "proceed":
                 print("Enter a key from the menu to proceed")
-                None
+                continue
             elif decision == "terminate":
                 print("Have a nice day :)")
                 break
